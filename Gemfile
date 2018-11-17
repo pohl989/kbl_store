@@ -32,7 +32,15 @@ gem 'omniauth'
 gem 'devise_token_auth'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'rspec-rails'
+  gem 'database_cleaner'
+  gem 'simplecov'
+  gem 'shoulda-matchers', git: 'https://github.com/thoughtbot/shoulda-matchers.git', branch: 'rails-5'
+  gem 'factory_bot_rails'
+
+  #These two bad boys in combo will make your rails console look nicer - BP
+  gem 'pry-rails'
+  gem 'awesome_print'
 end
 
 group :development do
