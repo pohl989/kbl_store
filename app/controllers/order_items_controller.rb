@@ -1,5 +1,6 @@
 class OrderItemsController < ApplicationController
   def index
+    render json: Order_item.all 
   end
 
   def show
