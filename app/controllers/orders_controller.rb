@@ -18,6 +18,10 @@ class OrdersController < ApplicationController
     render json: order
   end
 
+  def destroy
+    Order.find(params[:id]).destroy
+    render json: {message: 'Order deleted'}
+  end
 
 
   def show
@@ -35,6 +39,6 @@ class OrdersController < ApplicationController
 
   def order_params
     params.require(:order).permit(:order_number, :status, :order_date)
-  end 
+  end
 
 end
