@@ -30,7 +30,7 @@ product_list = [
   'polo',
   'waterbottle',
   'stickers',
-  'baseball hat'
+  'baseball hat',
   'tote bag',
   'chapstick',
   'koozie'
@@ -41,7 +41,8 @@ product_list.each do |product_item|
   Product.create(
     description: Faker::Movie.quote,
     title: product_item,
-    price: rand * (25.00 - 5.00) + 5.00
+    price: (rand * (25.00 - 5.00) + 5.00).round(2),
+    product_number: Faker::Bank.iban("be")
   )
 end
 
