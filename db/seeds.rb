@@ -23,25 +23,27 @@ user_list.each do |email, name, nickname, image, password|
 end
 
 
-#
-# User.create(
-#   email: 'kat.c.tran@gmail.com',
-#   name: 'Katrina Tran',
-#   nickname: 'Kat',
-#   image: Faker::Avatar.image("my-own-slug", "50x50"),
-#   password: 'password',
-#   password_confirmation: 'password'
-# )
-#
-# User.create(
-#   email: 'kat.c.tran@gmail.com',
-#   name: 'Katrina Tran',
-#   nickname: 'Kat',
-#   image: Faker::Avatar.image("my-own-slug", "50x50"),
-#   password: 'password',
-#   password_confirmation: 'password'
-# )
+product_list = [
+  't-shirt',
+  'longsleeve shirt',
+  'sweatshirt',
+  'polo',
+  'waterbottle',
+  'stickers',
+  'baseball hat'
+  'tote bag',
+  'chapstick',
+  'koozie'
+]
 
+
+product_list.each do |product_item|
+  Product.create(
+    description: Faker::Movie.quote,
+    title: product_item,
+    price: rand * (25.00 - 5.00) + 5.00
+  )
+end
 
 
 puts 'Hello'
