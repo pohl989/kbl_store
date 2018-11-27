@@ -46,5 +46,17 @@ product_list.each do |product_item|
   )
 end
 
+# order_list = [
+#   order_number, status, order_date
+# ]
+
+# order_list.each do |order_number, status, order_date|
+  Order.create(
+    order_number: Faker::Number.digit,
+    status: Faker::File.extension,
+    order_date: Faker::Date.forward(23)
+  )
+end
+
 
 puts 'Hello friend'
