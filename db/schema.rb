@@ -31,8 +31,8 @@ ActiveRecord::Schema.define(version: 2018_11_28_053930) do
     t.date "order_date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "customer_id"
-    t.string "preparer_id"
+    t.integer "customer_id"
+    t.integer "preparer_id"
   end
 
   create_table "products", force: :cascade do |t|

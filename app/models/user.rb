@@ -6,4 +6,9 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
   include DeviseTokenAuth::Concerns::User
+
+  has_many :customer_orders, class_name: "Order", foreign_key: :customer_id
+  has_many :preparer_orders, class_name: "Order", foreign_key: :preparer_id
+
+
 end

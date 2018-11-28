@@ -1,7 +1,8 @@
 class Order < ApplicationRecord
   has_many :order_items
   has_many :products, through: :order_items
-  belongs_to :user
+  belongs_to :customer, class_name: "User", foreign_key: :customer_id
+  belongs_to :preparer, class_name: "User", foreign_key: :preparer_id
 
 
   validates :order_number, presence: true
