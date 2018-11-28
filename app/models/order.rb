@@ -7,7 +7,8 @@ class Order < ApplicationRecord
   validates :order_number, presence: true
   validates :status, presence: true
   validates :order_date, presence: true
-
+  validates :customer_id, presence: true
+  validates :preparer_id, presence: true
 
 
 end

@@ -45,16 +45,16 @@ product_list.each do |product_item|
     product_number: Faker::Bank.iban("be")
   )
 end
+puts "Products added"
 
-# order_list = [
-#   order_number, status, order_date
-# ]
 
-# order_list.each do |order_number, status, order_date|
+10.times do
   Order.create(
-    order_number: Faker::Number.digit,
-    status: Faker::File.extension,
-    order_date: Faker::Date.forward(23)
+    customer_id: 1,
+    preparer_id: 2,
+    order_number: "hjk",
+    status: 0,
+    order_date: Date.today
   )
 end
 
