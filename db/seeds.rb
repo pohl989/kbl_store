@@ -18,10 +18,22 @@ user_list.each do |email, name, nickname, image, password|
     nickname: nickname,
     image: image,
     password: password,
-    password_confirmation: password
+    password_confirmation: password,
   )
 end
 
+48.times do |index|
+  User.create(
+    email: "user-#{index}@pohl989.com",
+    name: "Username-#{index}",
+    nickname: Faker::RuPaul.queen,
+    image: Faker::Avatar.image("my-own-slug", "50x50"),
+    password: "password",
+    password_confirmation: "password",
+  )
+  end
+
+puts "we added some rockstar users"
 
 product_list = [
   't-shirt',
@@ -42,21 +54,24 @@ product_list.each do |product_item|
     description: Faker::Movie.quote,
     title: product_item,
     price: (rand * (25.00 - 5.00) + 5.00).round(2),
-    product_number: Faker::Bank.iban("be")
+    product_number: Faker::Bank.iban("be"),
+    image: Faker::Avatar.image,
   )
 end
+
 puts "Products added"
 
+codes_array = ["SWA", "SWT", "MTW", "PWN", "PWC", "PWS", "SEN", "YCC", "OPS", "NPS", "BLM", "FWS", "USF", "BOR", "SPE"]
 
-10.times do
+50.times do |index|
   Order.create(
-    customer_id: 1,
-    preparer_id: 2,
-    order_number: "hjk",
-    status: 0,
+    customer_id: (3..50).to_a.sample,
+    preparer_id: [1,2].sample,
+    order_number: "#{codes_array.sample}-12-#{index}",
+    status: Order.statuses.to_a.sample[0],
     order_date: Date.today
   )
 end
 
 
-puts 'Hello friend'
+puts 'Hello friend, the seeding is complete'

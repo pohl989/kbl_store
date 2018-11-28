@@ -40,6 +40,7 @@ ActiveRecord::Schema.define(version: 2018_11_28_053930) do
     t.string "title"
     t.decimal "price"
     t.string "product_number"
+    t.string "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
