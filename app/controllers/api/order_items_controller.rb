@@ -1,4 +1,4 @@
-class OrderItemsController < ApplicationController
+class Api::OrderItemsController < ApplicationController
   def index
     render json: Order_item.all 
   end
