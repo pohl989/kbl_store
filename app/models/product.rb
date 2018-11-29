@@ -9,4 +9,5 @@ class Product < ApplicationRecord
   validates :title, presence: true
   validates :price, presence: true
   validates :product_number, presence: true
+  validates :image, presence: true
 end

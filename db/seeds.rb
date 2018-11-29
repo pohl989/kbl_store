@@ -69,7 +69,6 @@ codes_array = ["SWA", "SWT", "MTW", "PWN", "PWC", "PWS", "SEN", "YCC", "OPS", "N
     preparer_id: [1,2].sample,
     order_number: "#{codes_array.sample}-12-#{index}",
     status: Order.statuses.to_a.sample[0],
-
     order_date: Date.today
   )
 end
