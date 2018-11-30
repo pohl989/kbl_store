@@ -74,4 +74,14 @@ codes_array = ["SWA", "SWT", "MTW", "PWN", "PWC", "PWS", "SEN", "YCC", "OPS", "N
 end
 
 
+Order.all.each do |order|
+  (1..5).to_a.sample.times do
+  order.order_items.create(
+    product_id: Product.all.sample.id,
+    quantity: (1..5).to_a.sample
+  )
+    end
+  end
+
+
 puts 'Hello friend, the seeding is complete'
