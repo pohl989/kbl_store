@@ -95,4 +95,13 @@ puts 'Orders are all in!'
 end
 
 
+Package.all.each do |package|
+  (1..5).to_a.sample.times do
+  package.package_items.create(
+    product_id: Product.all.sample.id,
+  )
+    end
+  end
+
+
 puts 'Hello friend, the seeding is complete'

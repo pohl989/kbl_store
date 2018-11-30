@@ -1,4 +1,5 @@
 class Package < ApplicationRecord
+  has_many :package_items
   before_create :set_code
 
   private
