@@ -86,7 +86,13 @@ Order.all.each do |order|
 
 puts 'Orders are all in!'
 
-(1...5).to_a.sample 
+
+5.times do
+  Package.create(
+    title: Faker::ChuckNorris.fact,
+    description: Faker::DumbAndDumber.quote
+  )
+end
 
 
 puts 'Hello friend, the seeding is complete'
