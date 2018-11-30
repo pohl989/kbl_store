@@ -84,4 +84,9 @@ Order.all.each do |order|
   end
 
 
+puts 'Orders are all in!'
+
+(1...5).to_a.sample 
+
+
 puts 'Hello friend, the seeding is complete'
