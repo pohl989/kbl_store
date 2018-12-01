@@ -87,7 +87,7 @@ Order.all.each do |order|
 puts 'Orders are all in!'
 
 
-5.times do
+20.times do
   Package.create(
     title: Faker::ChuckNorris.fact,
     description: Faker::DumbAndDumber.quote
