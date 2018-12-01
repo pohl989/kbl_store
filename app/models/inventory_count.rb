@@ -1,0 +1,2 @@
+class InventoryCount < ApplicationRecord
+end
