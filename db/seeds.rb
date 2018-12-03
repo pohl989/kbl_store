@@ -103,5 +103,13 @@ Package.all.each do |package|
     end
   end
 
+5.times do
+  Inventory_count.create(
+    title:
+    size:
+    quantity:
+  )
+
+
 
 puts 'Hello friend, the seeding is complete'
