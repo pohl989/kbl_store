@@ -104,11 +104,15 @@ Package.all.each do |package|
   end
 
 5.times do
-  Inventory_count.create(
-    title:
-    size:
-    quantity:
+  Order.all.each do |order|
+  order.inventory_count.create(
+    title: Faker::ChuckNorris.fact,
+    size:"small",
+    quantity: (1..5).to_a.sample
   )
+  end
+end
+
 
 
 
