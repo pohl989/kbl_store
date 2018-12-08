@@ -66,9 +66,11 @@ ActiveRecord::Schema.define(version: 2018_12_04_030542) do
     t.string "title"
     t.decimal "price"
     t.string "product_number"
+    t.string "image"
+    t.integer "status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "image"
+    t.index ["status"], name: "index_products_on_status"
   end
 
   create_table "users", force: :cascade do |t|
